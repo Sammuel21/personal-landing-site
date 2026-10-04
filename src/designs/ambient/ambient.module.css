@@ -79,7 +79,11 @@
 .heroVisual {
   position: relative;
   overflow: clip;
-  color: color-mix(in srgb, var(--foreground) var(--art-contrast), var(--project-accent));
+  color: color-mix(
+    in srgb,
+    var(--foreground) var(--art-contrast),
+    var(--project-accent)
+  );
   background: radial-gradient(
     ellipse,
     color-mix(in srgb, var(--project-accent) 10%, transparent) 0%,
@@ -186,7 +190,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  color: color-mix(in srgb, var(--foreground) var(--art-contrast), var(--project-accent));
+  color: color-mix(
+    in srgb,
+    var(--foreground) var(--art-contrast),
+    var(--project-accent)
+  );
   background: radial-gradient(
     ellipse,
     color-mix(in srgb, var(--project-accent) 12%, transparent),
@@ -225,7 +233,11 @@
   height: 230px;
   display: flex;
   justify-content: center;
-  color: color-mix(in srgb, var(--foreground) var(--art-contrast), var(--project-accent));
+  color: color-mix(
+    in srgb,
+    var(--foreground) var(--art-contrast),
+    var(--project-accent)
+  );
   background: radial-gradient(
     ellipse at 50% 70%,
     color-mix(in srgb, var(--project-accent) 10%, transparent),
@@ -354,8 +366,16 @@
 .detailArt {
   height: 450px;
   position: relative;
-  color: color-mix(in srgb, var(--foreground) var(--art-contrast), var(--project-accent));
-  background: radial-gradient(ellipse, color-mix(in srgb, var(--project-accent) 12%, var(--surface)), var(--surface) 70%);
+  color: color-mix(
+    in srgb,
+    var(--foreground) var(--art-contrast),
+    var(--project-accent)
+  );
+  background: radial-gradient(
+    ellipse,
+    color-mix(in srgb, var(--project-accent) 12%, var(--surface)),
+    var(--surface) 70%
+  );
   border: 1px solid var(--line);
   border-radius: 6px;
   display: flex;

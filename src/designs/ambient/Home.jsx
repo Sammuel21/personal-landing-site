@@ -41,7 +41,9 @@ export default function Home({ basePath = "" }) {
           </div>
           <div
             className={styles.heroVisual}
-            style={{ "--project-accent": portfolio.introduction.artwork.accent }}
+            style={{
+              "--project-accent": portfolio.introduction.artwork.accent,
+            }}
           >
             <Artwork
               visual={portfolio.introduction.artwork.visual}

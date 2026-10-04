@@ -118,8 +118,16 @@
 .featureArt,
 .detailArt {
   position: relative;
-  background: color-mix(in srgb, var(--project-accent) var(--art-tint), var(--background));
-  color: color-mix(in srgb, var(--foreground) var(--art-contrast), var(--project-accent));
+  background: color-mix(
+    in srgb,
+    var(--project-accent) var(--art-tint),
+    var(--background)
+  );
+  color: color-mix(
+    in srgb,
+    var(--foreground) var(--art-contrast),
+    var(--project-accent)
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -200,7 +208,11 @@
 }
 .smallArt {
   background: color-mix(in srgb, var(--project-accent) 24%, var(--background));
-  color: color-mix(in srgb, var(--foreground) var(--art-contrast), var(--project-accent));
+  color: color-mix(
+    in srgb,
+    var(--foreground) var(--art-contrast),
+    var(--project-accent)
+  );
 }
 .smallArt svg {
   width: 170px;

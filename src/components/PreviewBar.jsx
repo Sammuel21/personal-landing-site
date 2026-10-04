@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./shared.module.css";
 import { palettes, previewPath } from "../designs/palettes";
+import { designNames } from "../designs";
 
 export default function PreviewBar({ design, palette, slug }) {
   const suffix = slug ? `/projects/${slug}` : "";
@@ -9,7 +10,7 @@ export default function PreviewBar({ design, palette, slug }) {
       <nav className={styles.previewTop} aria-label="Design comparison">
         <span className={styles.previewLabel}>Design preview</span>
         <div className={styles.previewOptions}>
-          {["editorial", "ambient"].map((name) => (
+          {designNames.map((name) => (
             <Link
               key={name}
               href={previewPath(name, palette, slug)}

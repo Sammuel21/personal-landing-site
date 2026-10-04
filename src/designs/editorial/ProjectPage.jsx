@@ -17,6 +17,7 @@ export default function ProjectPage({ project, basePath = "" }) {
             {project.title}
             <span>.</span>
           </h1>
+          <p>{project.fullTitle}</p>
           <div className={styles.projectIntro}>
             <p>{project.summary}</p>
             <span className={styles.status}>{project.status}</span>
@@ -33,7 +34,7 @@ export default function ProjectPage({ project, basePath = "" }) {
           </span>
           <Artwork visual={project.visual} accent="var(--project-accent)" />
           <span className={styles.artFoot}>
-            ABSTRACT STUDY / THESIS PLACEHOLDER
+            ABSTRACT STUDY / BLOCK REPLACEMENT
           </span>
         </div>
         <div className={styles.detailSections}>

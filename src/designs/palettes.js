@@ -153,7 +153,13 @@ export const palettes = {
   },
 };
 
-export const defaultPalettes = { editorial: "olive", ambient: "lagoon" };
+export const defaultPalettes = {
+  editorial: "olive",
+  ambient: "lagoon",
+  eclipse: "lunar",
+  lattice: "silver",
+  studio: "vermilion",
+};
 export const paletteNames = Object.keys(palettes);
 export function getPalette(name) {
   return Object.hasOwn(palettes, name) ? palettes[name] : undefined;

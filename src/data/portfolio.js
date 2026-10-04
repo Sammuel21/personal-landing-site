@@ -23,35 +23,68 @@ export const projects = [
   {
     slug: "diploma-thesis",
     title: "Diploma thesis",
+    fullTitle:
+      "Compressing Large Language Models via Replacement of MLP Blocks",
     category: "Featured work / Research",
     summary:
-      "A dedicated space for a deeper investigation. The question, process, and discoveries will take shape here.",
-    status: "Content coming soon",
+      "Can a smaller network do the work of a larger MLP block? Exploring selective replacements inside language models, and the trade-off between model size and quality.",
+    status: "Research in progress",
     visual: "orbits",
     accent: "#bcc7a3",
+    presentation: {
+      original: { name: "Sol", role: "Original model", color: "#f2b45d" },
+      compressed: {
+        name: "Luna",
+        role: "Model with smaller MLP replacements",
+        color: "#b8cbf1",
+      },
+      diagramColors: { original: "#4169a1", replacement: "#c97658" },
+      paperColors: { original: "#e4a873", replacement: "#88a9c3" },
+      diagramCaption:
+        "Illustrative structure, not a measured compression ratio.",
+      steps: [
+        {
+          title: "Capture the behaviour",
+          text: "Run calibration data through the frozen model and collect input/output pairs from a selected MLP block. These pairs describe the transformation the replacement will learn.",
+        },
+        {
+          title: "Fit a smaller replacement",
+          text: "Train a smaller network to approximate that transformation. Candidate structures include a linear layer or a shallower MLP, while the surrounding model is kept intact.",
+        },
+        {
+          title: "Evaluate the whole model",
+          text: "Insert the replacement and evaluate model quality, including perplexity. A close local approximation is useful, but the effect on the full model is the important test.",
+        },
+      ],
+    },
     sections: [
       {
         id: "overview",
         title: "Overview",
-        text: "The thesis topic and its context will be introduced here. This page is a placeholder for the actual work.",
+        text: "Large language models contain MLP blocks with substantial parameter and computation costs. This thesis investigates treating an individual block as a function that can be approximated by a smaller network, while preserving the surrounding model structure.",
       },
       {
         id: "question",
         title: "Research question",
-        text: "The central question, motivation, and scope of the research will be added once the thesis content is ready.",
+        text: "Which MLP blocks can be replaced with smaller alternatives, and how much model quality is lost as compression increases? The aim is to understand the trade-off at both the individual-block and whole-model levels, rather than assume every block should be replaced.",
       },
       {
         id: "approach",
         title: "Approach",
-        text: "The methods, tools, and key decisions will be documented here, with room for diagrams and examples from the work.",
+        text: "Collect calibration input/output pairs from a frozen pretrained model, fit smaller substitutes to selected MLP transformations, and evaluate the modified model. The research considers replacement architectures, block selection, and the cumulative effects of replacing multiple blocks.",
       },
       {
         id: "outcomes",
         title: "Outcomes",
-        text: "Findings, limitations, and reflections will be shared here. No research results are available on this page yet.",
+        text: "Results are not published on this portfolio yet. The evaluation will examine compression and model-quality trade-offs, including perplexity and the effects of multiple replacements. Smaller size and preserved quality are objectives, not claims of an achieved result.",
       },
     ],
-    resources: [],
+    resources: [
+      {
+        label: "Explore the thesis repository",
+        href: "https://github.com/Sammuel21/diploma-thesis-block-replacement",
+      },
+    ],
   },
   {
     slug: "future-project-one",
