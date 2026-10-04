@@ -39,6 +39,12 @@ The intended application layout is `src/app/` for routes and shared layouts, `sr
 
 Use [clarify-intent](.agents/skills/clarify-intent/SKILL.md) when unresolved ambiguity could materially affect scope, correctness, user experience, or substantial rework. First inspect available context. Ask the smallest useful set of questions, usually 1-3 and at most 10 for one clarification episode. Routine reversible choices should use a reasonable stated assumption. Existing authorization remains valid; do not repeatedly ask for it.
 
+## Repository skills
+
+Installed third-party skills, pinned sources, and integration notes live in [docs/skills.md](docs/skills.md). Read its compatibility notes when using them. Keep `clarify-intent` as the lightweight default; use `grill-with-docs` for an explicitly requested deeper interview. When its wrapper asks for a `Skill` tool unavailable in this host, read and apply the installed `grilling` and `domain-modeling` instructions directly. Existing project documentation ownership rules and the host's current mode still apply.
+
 ## Completion and handoff
 
 After meaningful work, record its outcome and relevant verification once, update affected links/context, and leave any unfinished work with a concrete next action. Only add durable documentation that will help a later task. Do not create a separate session diary or duplicate the Git diff in prose.
+
+Read the active human and agent backlogs at the start of substantive work. After each verified logical work segment and before the final response or handoff, compare the work against active items and apply the [automatic completion checks](docs/conventions.md#automatic-completion-checks). Log verified completed agent tasks as `done` before removing them automatically, including tasks linked to human requests. Record completed human work separately; ask for removal with a bold, informative, item-specific message and remove the human entry only on explicit authorization. Without that authorization, skip removal and continue other work. Partial completion must leave the remaining scope active.

@@ -1,0 +1,36 @@
+{
+  "name": "repo",
+  "version": "1.0.0",
+  "description": "Personal landing site featuring my existing work &amp; projects in presentable and aesthetic manner.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sammuel21/personal-landing-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sammuel21/personal-landing-site/issues"
+  },
+  "homepage": "https://github.com/Sammuel21/personal-landing-site#readme",
+  "dependencies": {
+    "next": "^16.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.8"
+  }
+}

@@ -1,0 +1,9 @@
+.palette {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+}
+.palette ::selection {
+  background: var(--accent);
+  color: var(--background);
+}

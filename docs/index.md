@@ -1,7 +1,7 @@
 ---
 type: index
 created: "2026-10-03"
-updated: "2026-10-03"
+updated: "2026-10-04"
 curated: false
 ---
 
@@ -20,10 +20,11 @@ This is the entry point for persistent project knowledge. Follow the relevant li
 | [Backlog log](backlog/log.md) | Tracing item changes or completed work | Append-only history |
 | [Project log](log.md) | Tracing additions and durable decisions | Append-only history |
 | [Clarification skill](../.agents/skills/clarify-intent/SKILL.md) | Resolving consequential uncertainty | Reusable conditional workflow |
+| [Repository skills](skills.md) | Using or updating imported design, discovery, and interview workflows | Sources and compatibility notes |
 
 ## Current baseline
 
-As of 2026-10-03, the repository has a README and empty `src/` and `public/` directories. The project memory files are the first setup work. There is no `package.json`, application implementation, or application build/test command yet. Verify the working tree before relying on this snapshot.
+As of 2026-10-04, the Next.js application includes Editorial and Ambient portfolio layouts, ten independent colour palettes, shared content, a dedicated thesis page, and comparison previews. Editorial + Olive is the public default. Preview controls switch layout and palette; the public site uses configuration. See the [README](../README.md#designs-and-content) for configuration, content editing, routes, and source layout; verification and remaining findings live in the [agent backlog](backlog/agent.md). Verify the working tree before relying on this snapshot.
 
 The remote is [Sammuel21/personal-landing-site](https://github.com/Sammuel21/personal-landing-site); the branch observed during setup was `main`.
 
@@ -39,7 +40,7 @@ These statements summarize the owner's setup conversation on 2026-10-03; they do
 | Start without accounts, a database, or custom backend | Current portfolio requirements do not need them |
 | Keep repository memory small and inspectable | User requested lightweight statefulness, protected human intent, and append-only history |
 
-JavaScript versus TypeScript and the styling approach are still open. The earlier agent suggested ordinary CSS or CSS Modules; that suggestion is not a user decision. Detailed work and next actions belong in the [agent backlog](backlog/agent.md).
+The approved design milestone uses JavaScript, Next.js App Router server rendering, and CSS Modules, with no animation library or external font/image service. Artwork colours belong to portfolio content independently of page palettes. A small client component progressively adds section reveals. Next.js automatic agent-file generation is disabled because project instructions are maintained explicitly. Detailed work and next actions belong in the [agent backlog](backlog/agent.md).
 
 ## Maintenance
 

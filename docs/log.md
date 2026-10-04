@@ -29,3 +29,58 @@ Append-only record of meaningful additions and durable decisions. Follow the [lo
 - Actor: agent (Codex).
 - Added: [Root .gitignore](../.gitignore) for installed dependencies, Next.js output and generated types, coverage, local environment files, Vercel configuration, npm debug logs, and operating system metadata. Sanitized environment examples remain trackable.
 - Verification: Git ignore checks passed for 15 generated/local paths and 9 paths that must remain trackable, including source, lockfiles, documentation, and the repository skill. Whitespace validation passed.
+
+## [2026-10-03] fix | Make the development application runnable
+
+- Actor: agent (Codex).
+- Cause: Dependencies had been installed, but `package.json` still contained only the default npm test placeholder and application files were absent.
+- Changed: Added `dev`, `build`, and `start` scripts, marked the package private, and created the minimal JavaScript application and CSS. Disabled automatic Next.js agent-file generation in `next.config.mjs` and removed its generated addition to the existing project instructions.
+- Verification: Production build passed; the development server started and returned the home page with HTTP 200. Application commands and current state are documented in the README and index.
+- Lifecycle: See [A-001 completion](backlog/log.md) in the backlog history. The human backlog was not changed by this task.
+
+## [2026-10-03] add | Capture project question-answering idea
+
+- Actor: agent (Codex).
+- Added: [H-002](backlog/human.md#h-002---project-questions-through-an-llm-pipeline) preserves the owner's idea for an LLM pipeline supporting questions about a particular project, such as the owner's diploma thesis.
+- Verification: Checked active backlogs and backlog history for the next unused human ID; preserved the supplied idea verbatim and left existing entries unchanged.
+
+## [2026-10-04] add | Shared portfolio content and two visual designs
+
+- Actor: agent (Codex).
+- Decision: Implemented the owner's approved Editorial/Ambient plan using Next.js server pages and per-design CSS Modules. Shared content and a small registry keep design switching understandable; only progressive section reveals use a client component. No runtime dependency, external asset service, backend, or deployment was added.
+- Persistent context: [README](../README.md#designs-and-content) owns the configuration/content-editing guide; the index and agent handoff now describe the implemented portfolio. Human identity, research claims, and unavailable resources remain explicit placeholders.
+- Outcome and verification: See [A-002](backlog/log.md#2026-10-04-done--a-002---two-portfolio-designs-with-shared-content) for completed checks and limitations. A-003 records an unresolved advisory in the ESLint development dependency chain; the production dependency audit is clear.
+
+## [2026-10-04] refine | Contain Ambient's decorative hero at intermediate widths
+
+- Actor: agent (Codex).
+- Changed: Final screenshot review exposed overflow from the enlarged decorative SVG at an intermediate desktop width. Its container now clips decorative overflow without changing text or navigation.
+- Verification: At a 1280px browser viewport the document fits without horizontal overflow; production build passed. Refreshed desktop and mobile captures and restored the browser's normal viewport. A-002 remains complete.
+
+## [2026-10-04] add | Layout-independent palette selection
+
+- Actor: agent (Codex).
+- Decision: Following the owner's clarification, colour and composition are independent. Ten presets can be used with either layout; switching controls are restricted to previews, while `site.palette` sets the public choice. Existing schemes remain Olive and Lagoon, with minor text-tone adjustments for readable cross-layout contrast.
+- Implementation: A shared palette catalogue drives CSS variables for surfaces, typography, borders, selection, and artwork. Static preview paths preserve palette and project context, with no additional client-side state or dependency.
+- Context: The [README](../README.md#available-palettes) owns the palette guide; the index and handoff were updated. See [A-004](backlog/log.md#2026-10-04-done--a-004---independent-configurable-colour-palettes) for verification. Human backlog entries were not changed.
+
+## [2026-10-04] refine | Give artwork its own colours
+
+- Actor: agent (Codex).
+- Decision: Following owner feedback about monotony, artwork colour is now independent of the page palette. This supersedes A-004's palette-owned artwork approach: project accents and the Ambient introduction artwork are maintained in portfolio content, while palettes control page surfaces and typography. Light/dark adaptation preserves visibility without assigning every illustration the same hue.
+- Context and verification: The [README](../README.md#designs-and-content) documents editing; [A-005](backlog/log.md#2026-10-04-done--a-005---independent-artwork-colours) records verification. No dependency or configuration option was added.
+
+## [2026-10-04] add | Repository design and planning skills
+
+- Actor: agent (Codex).
+- Source: Owner explicitly requested Anthropic frontend-design, Vercel Labs find-skills, and Matt Pocock grill-with-docs, with frontend design deferred to the next prompt.
+- Outcome: Installed pinned repository-local copies plus grilling and domain-modeling, which the interview wrapper requires. Preserved upstream instructions, supporting references, Codex metadata, and licenses. The [skill guide](skills.md) records sources, use, updates, and host compatibility; AGENTS.md routes to it.
+- Verification: All five installed SKILL.md files matched their pinned upstream text; required references and explicit-invocation metadata are present. No application files or npm dependencies changed; frontend lint/build were not rerun for this instruction/documentation-only task. Existing human backlog entries were preserved.
+- Research: Read the [thesis README at the inspected revision](https://github.com/Sammuel21/diploma-thesis-block-replacement/blob/e8e6615ecf1119ec666237e5dbb7de898bb18211/README.md): replacement of frozen-model MLP blocks with smaller approximations trained on calibration input/output pairs. This describes research goals, not verified experimental results. The owner's Sol/Luna sun/moon relationship is visual inspiration for the next design request; the README alone does not establish those names or their exact model relationship.
+
+## [2026-10-04] change | Monitor backlog completion during agent work
+
+- Actor: agent (Codex).
+- Source: Owner's explicit request to add and execute [H-003](backlog/human.md#h-003---agentic-backlog-monitoring).
+- Decision: [Project instructions](../AGENTS.md#completion-and-handoff) now trigger [completion checks](conventions.md#automatic-completion-checks) after verified logical work segments and before handoff. [Conventions](conventions.md) schema version 2 separates human completion from removal approval, replacing version 1's requirement to retain finished agent tasks as `awaiting_human`. Verified agent tasks are logged and removed automatically; human removal requires a bold informative request and explicit item-specific approval.
+- Context: Captured the owner's request verbatim. Applied the workflow to this task; [A-006 and H-003 completion records](backlog/log.md#2026-10-04-done--a-006---apply-backlog-completion-checks-after-logical-work-segments) own the outcome, verification, and pending human removal approval. No new document or dependency was needed.
