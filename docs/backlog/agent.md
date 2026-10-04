@@ -1,6 +1,6 @@
 ---
 type: agent-backlog
-updated: "2026-10-04"
+updated: "2026-10-05"
 ---
 
 # Agent backlog
@@ -10,20 +10,13 @@ Editable working interpretation. Preserve links to human intent and evidence; ap
 ## Current handoff
 
 - Objective: Develop the portfolio incrementally while learning React.
-- State: Editorial and Ambient layouts support ten independent palettes. Artwork now retains individual content-defined colours across palettes. The public default remains Editorial + Olive; preview controls preserve layout, palette, and project. A-002, A-004, and A-005 are complete in the [backlog history](log.md). Configuration and editing instructions live in the [README](../../README.md#designs-and-content).
-- Evidence: Lint/build passed. A-005 checks the artwork refinement and caption contrast; A-004 records the earlier 40-route/configuration and responsive/navigation checks. See A-002 for the earlier motion-emulation limitation.
+- State: Five complete layouts (Editorial, Ambient, Eclipse, Lattice, Studio) support ten independent palettes and shared, source-backed thesis content. Artwork retains its own colours. Public configuration remains Editorial + Olive; preview controls preserve layout, palette, and project. Configuration and editing instructions live in the [README](../../README.md#designs-and-content).
+- Evidence: [A-007 completion](log.md#2026-10-05-done--a-007---eclipse-lattice-and-studio-portfolio-designs) records passing lint/build, 100 preview routes, configuration switching, responsive/accessibility checks, captures, and native zoom/motion verification limits.
 - Review: Reference documents remain explicitly unreviewed by a human. The proposed conventions are available for the owner to inspect; review metadata does not create an extra approval gate for otherwise authorized work.
 - Backlog monitoring: [Automatic completion checks](../conventions.md#automatic-completion-checks) are now required after verified logical work segments and before handoff. [A-006](log.md#2026-10-04-done--a-006---apply-backlog-completion-checks-after-logical-work-segments) is complete and removed; the [H-003 completion event](log.md#2026-10-04-done--h-003---agentic-backlog-monitoring) records pending human removal approval.
-- Next action: Await the owner's next prompt for additional designs, using the newly installed [design/interview skills](../skills.md). The owner supplied the thesis repository and Sol/Luna sun/moon inspiration; the [project log](../log.md) records the inspected README and limits of that evidence. No new design was requested for the installation turn. Deployment to Vercel remains a later task; H-002's project-question feature remains future work.
+- Next action: Receive the owner's design feedback; they requested no further testing during this handoff. Deployment to Vercel and H-002's project-question feature remain future work. Native browser zoom and OS motion toggling can be checked during a later manual review.
 
 ## Active tasks
-
-### A-007 - Eclipse, Lattice, and Studio portfolio designs
-
-- Status: in_progress.
-- Source and authorization: Owner's approved three-design implementation plan and confirmed source-backed thesis content / Sol-original to Luna-compressed relationship.
-- Acceptance: Three complete home/thesis families using all ten palettes; source-backed shared copy; local fonts; static accessible previews; lint/build and responsive, navigation, contrast, motion, and no-JavaScript checks.
-- Next action: Implement distinct compositions and explanatory graphics, then verify and record evidence before completion.
 
 ### A-003 - Recheck ESLint's transitive dependency advisory
 

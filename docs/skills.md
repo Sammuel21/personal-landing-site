@@ -1,7 +1,7 @@
 ---
 type: reference
 created: "2026-10-04"
-updated: "2026-10-04"
+updated: "2026-10-05"
 curated: false
 ---
 
@@ -12,6 +12,7 @@ Skills are agent instructions under `.agents/skills/`, independent of the websit
 | Skill | Purpose | Pinned source |
 | --- | --- | --- |
 | `frontend-design` | Subject-specific visual direction, planning, implementation, and critique | [Anthropic](https://github.com/anthropics/skills/tree/8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4/skills/frontend-design) |
+| `vercel-react-best-practices` | React/Next.js performance guidance for implementation and review | [Vercel Labs](https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices) |
 | `find-skills` | Discover skills through skills.sh and the Skills CLI | [Vercel Labs](https://github.com/vercel-labs/skills/tree/18f96ea131dab3b0fcc9b27cf7c6f6cbb6174680/skills/find-skills) |
 | `grill-with-docs` | Explicitly requested interview with domain documentation | [Matt Pocock](https://github.com/mattpocock/skills/tree/24fe0ef7737efae15c87225755e9f6f5965e4888/skills/engineering/grill-with-docs) |
 | `grilling` | Supporting interview workflow required by `grill-with-docs` | [Matt Pocock](https://github.com/mattpocock/skills/tree/24fe0ef7737efae15c87225755e9f6f5965e4888/skills/productivity/grilling) |
@@ -23,6 +24,7 @@ The existing `clarify-intent` remains the local workflow for small, consequentia
 
 - Mention `$frontend-design`, `$find-skills`, or `$grill-with-docs` in a request. Codex discovers repository skills and can select applicable skills by description; the imported `grill-with-docs` metadata explicitly disables implicit invocation. See [official skill documentation](https://learn.chatgpt.com/docs/build-skills).
 - A request to install a skill is not a request to perform its workflow. Use the deeper interview when requested, rather than on every implementation task.
+- Use `$vercel-react-best-practices` for React/Next.js implementation and performance review; pair it with `frontend-design` when both engineering and visual design are relevant. Read the applicable files under its `rules/` directory rather than loading the entire compiled guide for every change. Require a concrete benefit before adding optimization complexity or dependencies; caching, data-fetching libraries, and memoization are conditional techniques, not requirements for this mostly static portfolio. Keep its bundled `AGENTS.md` inside the skill folder as reference material; it does not replace root project instructions.
 - `grill-with-docs` names a host-specific `Skill` tool. In Codex without that tool, read and apply both supporting skills directly. Its interview is more extensive than `clarify-intent`; retain the repository's question limits and existing answers unless the owner explicitly requests otherwise.
 - Skills work during planning and implementation. In Plan mode, use research, questions, and design reasoning; defer repository edits requested by a skill until implementation is permitted.
 - Preserve this repository's single maintained home for facts and protected human backlog. Use existing docs where appropriate; create glossary/ADR files only when their content earns a separate home, and link any new document from the index. Do not create empty documentation scaffolding.

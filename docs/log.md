@@ -84,3 +84,18 @@ Append-only record of meaningful additions and durable decisions. Follow the [lo
 - Source: Owner's explicit request to add and execute [H-003](backlog/human.md#h-003---agentic-backlog-monitoring).
 - Decision: [Project instructions](../AGENTS.md#completion-and-handoff) now trigger [completion checks](conventions.md#automatic-completion-checks) after verified logical work segments and before handoff. [Conventions](conventions.md) schema version 2 separates human completion from removal approval, replacing version 1's requirement to retain finished agent tasks as `awaiting_human`. Verified agent tasks are logged and removed automatically; human removal requires a bold informative request and explicit item-specific approval.
 - Context: Captured the owner's request verbatim. Applied the workflow to this task; [A-006 and H-003 completion records](backlog/log.md#2026-10-04-done--a-006---apply-backlog-completion-checks-after-logical-work-segments) own the outcome, verification, and pending human removal approval. No new document or dependency was needed.
+
+## [2026-10-05] add | Three research-inspired portfolio designs
+
+- Actor: agent (Codex).
+- Decision: Implemented the approved Eclipse, Lattice, and Studio compositions with shared thesis content, separate artwork colours, local licensed fonts, and server-rendered HTML/CSS/SVG. The portfolio now offers five layouts with ten interchangeable palettes; public configuration remains Editorial + Olive.
+- Research: Thesis descriptions paraphrase the inspected repository sources linked in the [editing guide](../README.md#designs-and-content). The owner confirmed Sol as original and Luna as compressed with replacement MLP blocks. This supersedes the earlier uncertainty about those presentation roles; diagrams remain illustrative and results unpublished.
+- Context: Updated the README, project index, and agent handoff. [A-007](backlog/log.md#2026-10-05-done--a-007---eclipse-lattice-and-studio-portfolio-designs) owns verification and remaining native-browser testing limits. Human backlog entries remain unchanged; further review stopped at the owner's request for a feedback handoff.
+
+## [2026-10-05] add | Vercel React performance skill
+
+- Actor: agent (Codex).
+- Source and authorization: Owner's explicit request to integrate `vercel-react-best-practices` following the suitability assessment.
+- Outcome: Installed the official skill repository-locally at revision `063bee94c3f4df8453406c830b0a7df0f2860278`, preserving its upstream instructions, MIT license declaration, compiled guide, metadata, and rule references. The [skill guide](skills.md) records the pinned source and selective-use guidance: require a concrete benefit before introducing optimization complexity or dependencies.
+- Verification: Installer completed successfully; the skill name, compiled guide, and referenced rule files are present (72 files in the bundled rules directory, including support files). Whitespace checks passed. No application code or npm dependency changed, so application tests were not rerun.
+- Completion check: This installation does not complete the broader H-001 request, H-002, or A-003. Existing backlog entries and H-003's pending removal approval remain unchanged.
