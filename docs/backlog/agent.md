@@ -18,6 +18,13 @@ Editable working interpretation. Preserve links to human intent and evidence; ap
 
 ## Active tasks
 
+### A-008 - Refine Eclipse artwork, typography, and motion
+
+- Status: in_progress.
+- Source and authorization: Owner's approved Eclipse revision plan on 2026-10-05.
+- Acceptance: Two configurable artwork styles; Manrope typography; accessible shared orbit and transfer pulses; static previews with retained navigation; focused verification and captures.
+- Next action: Finish implementation, verify affected pages, and return for visual feedback.
+
 ### A-003 - Recheck ESLint's transitive dependency advisory
 
 - Status: proposed.
@@ -25,4 +32,4 @@ Editable working interpretation. Preserve links to human intent and evidence; ap
 - Evidence: Five high-severity entries describe this one development-tool dependency chain. `npm audit --omit=dev --json` reports zero production advisories as of 2026-10-04. Current linting passes. npm's suggested fix downgrades the Next lint configuration to 14.2.35, which is incompatible with the chosen configuration; no forced downgrade was applied.
 - Next action: Recheck for a patched compatible lint-tool dependency chain and update it when available. Keep dependency updates separate from the design implementation.
 
-Backend, accounts, and a database currently have no requirement. No implementation task remains in progress.
+Backend, accounts, and a database currently have no requirement.

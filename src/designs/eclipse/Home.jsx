@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { portfolio, projects } from "../../data/portfolio";
 import DesignShell from "../DesignShell";
-import { Celestial, PaperStudy } from "../../components/ResearchArt";
+import { PaperStudy } from "../../components/ResearchArt";
+import OrbitalScene from "./OrbitalScene";
+import { getConfiguredEclipseArtwork } from "./artwork";
 import styles from "./eclipse.module.css";
 
 export function EclipseShell({ children, basePath }) {
@@ -17,23 +19,24 @@ export function EclipseShell({ children, basePath }) {
   );
 }
 
-export default function Home({ basePath = "" }) {
+export default function Home({
+  basePath = "",
+  artwork = getConfiguredEclipseArtwork(),
+}) {
   const [thesis, ...future] = projects;
   return (
     <EclipseShell basePath={basePath}>
       <main id="main" tabIndex={-1}>
         <section className={styles.hero} aria-labelledby="intro-title">
-          <p className={styles.overline}>A portfolio of work and questions</p>
           <h1 id="intro-title">{portfolio.introduction.title.join(" ")}</h1>
           <p className={styles.intro}>{portfolio.introduction.description}</p>
-          <Celestial presentation={thesis.presentation} animate />
+          <OrbitalScene presentation={thesis.presentation} artwork={artwork} />
         </section>
         <section
           id="work"
           className={styles.feature}
           aria-labelledby="work-title"
         >
-          <p className={styles.overline}>Featured research</p>
           <h2 id="work-title">
             A smaller form.
             <br />A question of possibility.
@@ -90,7 +93,6 @@ export default function Home({ basePath = "" }) {
           className={styles.contact}
           aria-labelledby="contact-title"
         >
-          <p className={styles.overline}>The next connection</p>
           <h2 id="contact-title">{portfolio.contact.title}</h2>
           <p>{portfolio.contact.description}</p>
           <a className={styles.link} href={portfolio.contact.links[0].href}>

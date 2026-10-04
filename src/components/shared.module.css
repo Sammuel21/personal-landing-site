@@ -118,6 +118,18 @@
 .swatches {
   display: inline-flex;
 }
+.artworkOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.artworkOptions > span {
+  color: #c3c5ca;
+  margin-right: 8px;
+}
 .swatches > span {
   width: 10px;
   height: 14px;

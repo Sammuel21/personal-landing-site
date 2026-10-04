@@ -1,0 +1,241 @@
+.figure {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.stage {
+  position: relative;
+  aspect-ratio: 1.65;
+  perspective: 1200px;
+  overflow: clip;
+  /* Keep the 3D ancestors free of filters/opacity/overflow that flatten depth. */
+}
+.plane {
+  position: absolute;
+  width: 52%;
+  aspect-ratio: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateZ(-15deg) rotateX(60deg);
+  transform-style: preserve-3d;
+}
+.trajectory {
+  border: 1px solid color-mix(in srgb, var(--foreground) 36%, transparent);
+  border-radius: 50%;
+}
+.plane:not(.trajectory) {
+  z-index: 1;
+}
+.rotor {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  animation: orbit 48s linear infinite;
+  animation-play-state: paused;
+}
+.position {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-style: preserve-3d;
+}
+.smallPosition {
+  left: 100%;
+}
+.counter {
+  transform-style: preserve-3d;
+  animation: counter-orbit 48s linear infinite;
+  animation-play-state: paused;
+}
+.upright {
+  transform-style: preserve-3d;
+  transform: rotateX(-60deg) rotateZ(15deg);
+}
+.body {
+  position: absolute;
+  width: clamp(96px, 21vw, 220px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  color: color-mix(
+    in srgb,
+    var(--original),
+    var(--foreground) var(--art-contrast)
+  );
+}
+.smallBody {
+  width: clamp(58px, 12.6vw, 132px);
+  color: color-mix(
+    in srgb,
+    var(--compressed),
+    var(--foreground) var(--art-contrast)
+  );
+}
+.sphere {
+  width: 100%;
+  height: 100%;
+}
+.transfer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+}
+.beam {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 18%,
+    var(--original) 36%,
+    var(--compressed) 65%,
+    transparent 82%
+  );
+  opacity: 0;
+  animation: beam 12s linear infinite;
+  animation-play-state: paused;
+}
+.pulseTrack {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: transfer 12s linear infinite;
+  animation-play-state: paused;
+}
+.pulseTrack i {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: var(--foreground);
+}
+.figure[data-motion="running"] .rotor,
+.figure[data-motion="running"] .counter,
+.figure[data-motion="running"] .beam,
+.figure[data-motion="running"] .pulseTrack {
+  animation-play-state: running;
+}
+.figure[data-reduced-motion="true"] .transfer {
+  visibility: hidden;
+}
+.legend {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  align-items: center;
+  max-width: 670px;
+  margin: 0 auto;
+  text-align: center;
+  gap: 15px;
+}
+.legend strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 550;
+  letter-spacing: -0.4px;
+}
+.legend span:not(.legendArrow) {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-top: 6px;
+}
+.legendArrow {
+  color: var(--muted);
+  font-size: 20px;
+}
+.figure figcaption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+  margin-top: 24px;
+}
+.controls {
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+.controls button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--foreground);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 3px 7px;
+  cursor: pointer;
+  font-size: inherit;
+}
+.controls button:hover {
+  border-color: var(--foreground);
+}
+@keyframes orbit {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes counter-orbit {
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+@keyframes transfer {
+  0%,
+  5% {
+    transform: translateX(18%);
+    opacity: 0;
+  }
+  9% {
+    opacity: 0.8;
+  }
+  22% {
+    opacity: 0.8;
+  }
+  27%,
+  100% {
+    transform: translateX(82%);
+    opacity: 0;
+  }
+}
+@keyframes beam {
+  0%,
+  5%,
+  32%,
+  100% {
+    opacity: 0;
+  }
+  12%,
+  24% {
+    opacity: 0.5;
+  }
+}
+@media (max-width: 600px) {
+  .stage {
+    aspect-ratio: 1.32;
+  }
+  .plane {
+    width: 66%;
+  }
+  .legend {
+    grid-template-columns: 1fr 20px 1fr;
+    gap: 8px;
+  }
+  .legend strong {
+    font-size: 14px;
+  }
+  .legend span:not(.legendArrow) {
+    font-size: 10px;
+  }
+  .figure figcaption {
+    font-size: 9px;
+    margin-top: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .transfer {
+    display: none;
+  }
+}

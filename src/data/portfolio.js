@@ -32,11 +32,10 @@ export const projects = [
     visual: "orbits",
     accent: "#bcc7a3",
     presentation: {
-      original: { name: "Sol", role: "Original model", color: "#f2b45d" },
+      original: { name: "Sol", role: "Original model" },
       compressed: {
         name: "Luna",
         role: "Model with smaller MLP replacements",
-        color: "#b8cbf1",
       },
       diagramColors: { original: "#4169a1", replacement: "#c97658" },
       paperColors: { original: "#e4a873", replacement: "#88a9c3" },

@@ -1,11 +1,11 @@
 .site {
-  --display: var(--font-display), Georgia, serif;
+  font-weight: 450;
 }
 .navigation {
   border-bottom: 1px solid var(--line);
 }
 .hero {
-  padding-top: 64px;
+  padding-top: 50px;
   text-align: center;
 }
 .overline {
@@ -15,12 +15,11 @@
   margin: 0 0 24px;
 }
 .hero h1 {
-  font-family: var(--display);
-  font-size: clamp(56px, 7.8vw, 112px);
-  font-weight: 400;
+  font-size: clamp(44px, 6.5vw, 86px);
+  font-weight: 500;
   letter-spacing: -2.5px;
   line-height: 1.03;
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto 25px;
 }
 .intro {
@@ -32,17 +31,16 @@
 }
 .hero figure {
   max-width: 1000px;
-  margin: 28px auto 0;
+  margin: 0 auto;
 }
 .feature {
   text-align: center;
   max-width: 640px;
-  margin: 88px auto 110px;
+  margin: 34px auto 82px;
 }
 .feature h2 {
-  font-family: var(--display);
-  font-size: clamp(44px, 5vw, 70px);
-  font-weight: 400;
+  font-size: clamp(34px, 4.4vw, 56px);
+  font-weight: 500;
   line-height: 1.08;
   letter-spacing: -1px;
   margin: 20px 0 26px;
@@ -85,9 +83,8 @@
   padding: 30px 0;
 }
 .sectionTop h2 {
-  font-family: var(--display);
   font-size: 38px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
 }
 .sectionTop > span {
@@ -109,9 +106,8 @@
   height: 100%;
 }
 .catalogue h3 {
-  font-family: var(--display);
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 24px 0 12px;
 }
 .catalogue p {
@@ -130,8 +126,7 @@
   border-top: 1px solid var(--line);
 }
 .about h2 {
-  font-family: var(--display);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 54px;
   margin: 0;
 }
@@ -147,9 +142,8 @@
   text-align: center;
 }
 .contact h2 {
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(48px, 6vw, 82px);
+  font-weight: 500;
+  font-size: clamp(38px, 5vw, 64px);
   line-height: 1.07;
   max-width: 680px;
   margin: 0 auto 25px;
@@ -173,9 +167,8 @@
   margin-top: 55px;
 }
 .projectHero h1 {
-  font-family: var(--display);
-  font-size: clamp(46px, 6.4vw, 86px);
-  font-weight: 400;
+  font-size: clamp(38px, 5.4vw, 70px);
+  font-weight: 500;
   line-height: 1.07;
   letter-spacing: -1.4px;
   max-width: 900px;
@@ -192,8 +185,7 @@
   padding: 15px 0 36px;
 }
 .narrative h2 {
-  font-family: var(--display);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 40px;
   margin: 0 0 20px;
 }
@@ -224,7 +216,7 @@
 }
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: 60px;
+    font-size: 44px;
     letter-spacing: -1.5px;
   }
   .intro {
@@ -235,13 +227,13 @@
     margin-bottom: 18px;
   }
   .hero figure {
-    margin-top: 35px;
+    margin-top: 0;
   }
   .feature {
-    margin: 58px auto 65px;
+    margin: 28px auto 55px;
   }
   .feature h2 {
-    font-size: 46px;
+    font-size: 36px;
   }
   .sectionTop {
     align-items: flex-start;
@@ -274,13 +266,13 @@
     padding: 55px 0;
   }
   .contact h2 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .projectHero .overline {
     margin-top: 35px;
   }
   .projectHero h1 {
-    font-size: 48px;
+    font-size: 38px;
   }
   .narrative {
     margin: 55px auto;

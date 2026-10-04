@@ -41,7 +41,7 @@ Use [clarify-intent](.agents/skills/clarify-intent/SKILL.md) when unresolved amb
 
 ## Repository skills
 
-Installed third-party skills, pinned sources, and integration notes live in [docs/skills.md](docs/skills.md). Read its compatibility notes when using them. Keep `clarify-intent` as the lightweight default; use `grill-with-docs` for an explicitly requested deeper interview. When its wrapper asks for a `Skill` tool unavailable in this host, read and apply the installed `grilling` and `domain-modeling` instructions directly. Existing project documentation ownership rules and the host's current mode still apply.
+Installed third-party skills, pinned sources, and integration notes live in [docs/skills.md](docs/skills.md). Read its compatibility notes when using them. Apply `frontend-design` to frontend improvements and `vercel-react-best-practices` to relevant React/Next.js planning, implementation, and review, even when not explicitly named. When consequential ambiguity remains, use `clarify-intent` with focused questions from `grilling`; do not require an interview for settled or routine work. Use the fuller `grill-with-docs` workflow when a deeper interview is requested. When its wrapper asks for a `Skill` tool unavailable in this host, read and apply the installed `grilling` and `domain-modeling` instructions directly. Skills are advisory: the owner's preferences and project simplicity rules take precedence over prescribed aesthetics, exhaustive interviews, and speculative optimization. Existing documentation ownership rules and the host's current mode still apply.
 
 ## Completion and handoff
 

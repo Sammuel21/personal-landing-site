@@ -1,6 +1,6 @@
 import Navigation from "../components/Navigation";
 import { portfolio } from "../data/portfolio";
-import { manrope, instrument } from "./fonts";
+import { manrope } from "./fonts";
 import styles from "./common.module.css";
 
 export default function DesignShell({
@@ -13,7 +13,7 @@ export default function DesignShell({
   return (
     <div
       data-design={name}
-      className={`${manrope.className} ${instrument.variable} ${styles.shell} ${className}`}
+      className={`${manrope.className} ${styles.shell} ${className}`}
     >
       <Navigation
         basePath={basePath}

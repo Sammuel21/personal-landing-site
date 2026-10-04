@@ -165,6 +165,7 @@ export function getPalette(name) {
   return Object.hasOwn(palettes, name) ? palettes[name] : undefined;
 }
 
-export function previewPath(design, palette, slug) {
-  return `/preview/${design}/palette/${palette}${slug ? `/projects/${slug}` : ""}`;
+export function previewPath(design, palette, slug, artwork) {
+  const artPath = design === "eclipse" && artwork ? `/artwork/${artwork}` : "";
+  return `/preview/${design}/palette/${palette}${artPath}${slug ? `/projects/${slug}` : ""}`;
 }

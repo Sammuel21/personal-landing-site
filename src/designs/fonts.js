@@ -6,10 +6,3 @@ export const manrope = localFont({
   display: "swap",
   fallback: ["Arial", "sans-serif"],
 });
-export const instrument = localFont({
-  src: "./fonts/InstrumentSerif-Regular.ttf",
-  weight: "400",
-  display: "swap",
-  variable: "--font-display",
-  fallback: ["Georgia", "serif"],
-});

@@ -2,8 +2,9 @@ import Link from "next/link";
 import styles from "./shared.module.css";
 import { palettes, previewPath } from "../designs/palettes";
 import { designNames } from "../designs";
+import { eclipseArtworks } from "../designs/eclipse/artwork";
 
-export default function PreviewBar({ design, palette, slug }) {
+export default function PreviewBar({ design, palette, slug, artwork }) {
   const suffix = slug ? `/projects/${slug}` : "";
   return (
     <aside className={styles.preview} aria-label="Portfolio preview controls">
@@ -13,7 +14,12 @@ export default function PreviewBar({ design, palette, slug }) {
           {designNames.map((name) => (
             <Link
               key={name}
-              href={previewPath(name, palette, slug)}
+              href={previewPath(
+                name,
+                palette,
+                slug,
+                name === design ? artwork : undefined,
+              )}
               aria-current={design === name ? "page" : undefined}
             >
               {name}
@@ -28,7 +34,7 @@ export default function PreviewBar({ design, palette, slug }) {
         {Object.entries(palettes).map(([name, option]) => (
           <Link
             key={name}
-            href={previewPath(design, name, slug)}
+            href={previewPath(design, name, slug, artwork)}
             aria-current={palette === name ? "page" : undefined}
             title={option.description}
           >
@@ -45,6 +51,20 @@ export default function PreviewBar({ design, palette, slug }) {
           </Link>
         ))}
       </nav>
+      {design === "eclipse" && (
+        <nav className={styles.artworkOptions} aria-label="Eclipse artwork">
+          <span>Artwork</span>
+          {Object.entries(eclipseArtworks).map(([name, option]) => (
+            <Link
+              key={name}
+              href={previewPath(design, palette, slug, name)}
+              aria-current={artwork === name ? "page" : undefined}
+            >
+              {option.label}
+            </Link>
+          ))}
+        </nav>
+      )}
     </aside>
   );
 }

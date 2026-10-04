@@ -1,7 +1,7 @@
 ---
 type: index
 created: "2026-10-03"
-updated: "2026-10-04"
+updated: "2026-10-05"
 curated: false
 ---
 
@@ -40,7 +40,7 @@ These statements summarize the owner's setup conversation on 2026-10-03; they do
 | Start without accounts, a database, or custom backend | Current portfolio requirements do not need them |
 | Keep repository memory small and inspectable | User requested lightweight statefulness, protected human intent, and append-only history |
 
-The approved design milestone uses JavaScript, Next.js App Router server rendering, and CSS Modules, with no animation library or external font/image service. Artwork colours belong to portfolio content independently of page palettes. A small client component progressively adds section reveals. Next.js automatic agent-file generation is disabled because project instructions are maintained explicitly. Detailed work and next actions belong in the [agent backlog](backlog/agent.md).
+The approved design milestone uses JavaScript, Next.js App Router server rendering, and CSS Modules, with no animation library or external font/image service. Artwork colours remain independent of page palettes. Eclipse offers Abstract and Celestial artwork with a pausable shared orbit and Manrope typography. Small client components provide reveal and playback behavior; still pages remain usable without JavaScript. Next.js automatic agent-file generation is disabled because project instructions are maintained explicitly. Detailed work and next actions belong in the [agent backlog](backlog/agent.md).
 
 ## Maintenance
 

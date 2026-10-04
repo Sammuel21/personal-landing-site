@@ -1,10 +1,16 @@
 import Link from "next/link";
 import { EclipseShell } from "./Home";
 import { Resources } from "../DesignShell";
-import { Celestial, BlockDiagram } from "../../components/ResearchArt";
+import { BlockDiagram } from "../../components/ResearchArt";
+import OrbitalScene from "./OrbitalScene";
+import { getConfiguredEclipseArtwork } from "./artwork";
 import styles from "./eclipse.module.css";
 
-export default function ProjectPage({ project, basePath = "" }) {
+export default function ProjectPage({
+  project,
+  basePath = "",
+  artwork = getConfiguredEclipseArtwork(),
+}) {
   return (
     <EclipseShell basePath={basePath}>
       <main id="main" tabIndex={-1}>
@@ -18,7 +24,7 @@ export default function ProjectPage({ project, basePath = "" }) {
           <h1>{project.fullTitle}</h1>
           <p className={styles.intro}>{project.summary}</p>
         </header>
-        <Celestial presentation={project.presentation} />
+        <OrbitalScene presentation={project.presentation} artwork={artwork} />
         <div className={styles.narrative}>
           {project.sections.map((section) => (
             <section key={section.id} aria-labelledby={section.id}>
