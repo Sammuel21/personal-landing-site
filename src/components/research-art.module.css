@@ -124,7 +124,7 @@
   grid-template-columns: repeat(7, 1fr);
 }
 .dense i {
-  background: var(--source-color);
+  background: color-mix(in srgb, var(--foreground) 20%, var(--source-color));
   border-radius: 2px;
 }
 .compact {
@@ -134,7 +134,7 @@
   margin-block: 15px;
 }
 .compact i {
-  background: var(--replacement-color);
+  background: color-mix(in srgb, var(--foreground) 20%, var(--replacement-color));
   border-radius: 2px;
 }
 .paper {

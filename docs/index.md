@@ -24,7 +24,7 @@ This is the entry point for persistent project knowledge. Follow the relevant li
 
 ## Current baseline
 
-As of 2026-10-04, the Next.js application includes Editorial and Ambient portfolio layouts, ten independent colour palettes, shared content, a dedicated thesis page, and comparison previews. Editorial + Olive is the public default. Preview controls switch layout and palette; the public site uses configuration. See the [README](../README.md#designs-and-content) for configuration, content editing, routes, and source layout; verification and remaining findings live in the [agent backlog](backlog/agent.md). Verify the working tree before relying on this snapshot.
+As of 2026-10-04, the Next.js application includes Editorial, Ambient, Eclipse, Lattice, and Studio portfolio layouts, ten independent colour palettes, shared content, a source-backed thesis page, and comparison previews. Editorial + Olive is the public default. Preview controls switch layout and palette; the public site uses configuration. See the [README](../README.md#designs-and-content) for configuration, content editing, research sources, local fonts, routes, and source layout; verification and remaining findings live in the [agent backlog](backlog/agent.md). Verify the working tree before relying on this snapshot.
 
 The remote is [Sammuel21/personal-landing-site](https://github.com/Sammuel21/personal-landing-site); the branch observed during setup was `main`.
 

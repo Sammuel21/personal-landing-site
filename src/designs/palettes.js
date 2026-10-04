@@ -1,4 +1,4 @@
-// Layout controls composition; palettes control colour roles in either layout.
+// Layout controls composition; palettes control colour roles in every layout.
 // Artwork colours belong to portfolio content, independently of these UI colours.
 export const palettes = {
   olive: {

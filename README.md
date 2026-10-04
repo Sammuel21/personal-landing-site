@@ -13,16 +13,29 @@ Install dependencies with `npm install`, then run `npm run dev` and open http://
 
 ## Designs and content
 
-The site has two layouts: **Editorial** (serif typography and project rows) and **Ambient** (abstract graphics and project panels). Both share portfolio content and a dedicated thesis page. Colour palettes are independent of layout, so either layout can be light or dark.
+The site has five layouts sharing portfolio content and a dedicated thesis page. All ten colour palettes work independently with every layout: 50 combinations, each with a homepage and thesis page.
+
+| Design | Composition | Default preview palette |
+| --- | --- | --- |
+| `editorial` | Serif typography and project rows | Olive |
+| `ambient` | Abstract graphics and project panels | Lagoon |
+| `eclipse` | Centered celestial composition connecting Sol and Luna | Lunar |
+| `lattice` | Diagram-led research portfolio with native thesis disclosures | Silver |
+| `studio` | Oversized type and offset paper-study posters | Vermilion |
 
 - Set `design` and `palette` in [`src/config/site.js`](src/config/site.js), for example `{ design: "ambient", palette: "silver" }`. Both public pages use the same combination. The default remains Editorial + Olive. Rebuild for production after changing configuration; unsupported values produce a clear error.
-- Compare `/preview/editorial` (original Olive) and `/preview/ambient` (original Lagoon). Their controls let you switch palette and layout while keeping the current project. Controls only appear in previews; the public site uses configuration.
+- Compare `/preview/{design}` using any design name above. Controls let you switch palette and layout while keeping the current project. Controls only appear in previews; the public site uses configuration.
 - Every combination has a shareable URL, such as `/preview/ambient/palette/silver` or `/preview/editorial/palette/lunar/projects/diploma-thesis`. Project, back, and section links retain both selections. All supported pages are pre-rendered; unknown combinations return 404. Previews have `noindex, nofollow` and are accessible to anyone with the URL.
 - Edit introduction, biography, GitHub contact, and projects in [`src/data/portfolio.js`](src/data/portfolio.js). The first project is featured. Keep placeholder labels until replacing them with real content.
 - Project `visual` selects `orbits`, `steps`, or `grid`; its `accent` sets the artwork colour independently of the page palette. The Ambient introduction graphic uses `portfolio.introduction.artwork.visual` and `.accent`. Graphics live in `src/components/Artwork.jsx`.
+- Thesis `fullTitle` supplies the research title. Its `presentation` object contains the Sol/Luna roles, artwork colours, explanatory caption, and method steps used by the new families. `src/components/ResearchArt.jsx` owns the celestial, block-replacement, and paper graphics. These are illustrative, not numerical representations of experimental results.
 - Detail `sections` contain `id`, `title`, and `text`. Projects with sections receive `/projects/{slug}` and matching preview routes. Optional `resources` contain `{ label, href }`; absent resources show an honest coming-soon message.
-- The two future-project examples are deliberately noninteractive. When replacing one with a full project, add its sections and link its card in both homepage components.
+- The two future-project examples are deliberately noninteractive. When replacing one with a full project, add its sections and an appropriate presentation, then link its entry in each homepage and verify its detail page in every family.
 - General page metadata is in `src/app/layout.jsx`; thesis titles/descriptions come from the project data.
+
+The thesis overview and methodology paraphrase its [README](https://github.com/Sammuel21/diploma-thesis-block-replacement/blob/e8e6615ecf1119ec666237e5dbb7de898bb18211/README.md) and [block-level research notes](https://github.com/Sammuel21/diploma-thesis-block-replacement/blob/e8e6615ecf1119ec666237e5dbb7de898bb18211/docs/documentation/block-level.md). Sol as the original and Luna as the compressed model are the owner's confirmed presentation convention. Results remain explicitly unpublished; notebook outputs are not presented as validated findings.
+
+Eclipse uses Instrument Serif display headings; all three new families use Manrope body text. Both fonts are bundled in `src/designs/fonts/` with their SIL Open Font Licenses and loaded through `next/font/local`. The originals retain their system fonts. No font service is contacted at runtime or build time. Sources: [Instrument Serif](https://github.com/google/fonts/tree/main/ofl/instrumentserif) and [Manrope](https://github.com/google/fonts/tree/main/ofl/manrope).
 
 ### Available palettes
 

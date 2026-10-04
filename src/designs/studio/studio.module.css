@@ -132,11 +132,9 @@
 @keyframes settle {
   from {
     transform: translateY(15px) rotate(4deg);
-    opacity: 0.5;
   }
   to {
     transform: translateY(0) rotate(2deg);
-    opacity: 1;
   }
 }
 .other {
@@ -400,12 +398,6 @@
   }
   .featureCopy h2 {
     font-size: 46px;
-  }
-  .featureCopy h2 br {
-    display: none;
-  }
-  .featureCopy h2 br::after {
-    content: " ";
   }
   .mainPoster {
     width: 100%;
