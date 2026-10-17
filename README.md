@@ -3,6 +3,8 @@ Personal landing site featuring my existing work &amp; projects in presentable a
 
 Project direction, working backlogs, and agent conventions are in the [documentation index](docs/index.md).
 
+The next design phase follows the [confirmed design brief](docs/design/brief.md) and [reference analysis](docs/design/analysis/README.md). It develops one deliberate identity while preserving the existing previews described below. Local reference screenshots are kept in the ignored `docs/design/analysis/assets-local/` directory; the versioned analysis links to their sources and records capture limitations.
+
 ## Run locally
 
 Install dependencies with `npm install`, then run `npm run dev` and open http://localhost:3000.
