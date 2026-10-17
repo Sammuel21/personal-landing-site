@@ -159,6 +159,11 @@ export const defaultPalettes = {
   eclipse: "lunar",
   lattice: "silver",
   studio: "vermilion",
+  broadside: "vermilion",
+  fieldnotes: "ember",
+  index: "silver",
+  gallery: "graphite",
+  wayfinder: "cobalt",
 };
 export const paletteNames = Object.keys(palettes);
 export function getPalette(name) {

@@ -1,7 +1,7 @@
 ---
 type: reference
 created: "2026-10-04"
-updated: "2026-10-05"
+updated: "2026-10-17"
 curated: false
 ---
 
@@ -12,6 +12,7 @@ Skills are agent instructions under `.agents/skills/`, independent of the websit
 | Skill | Purpose | Pinned source |
 | --- | --- | --- |
 | `frontend-design` | Subject-specific visual direction, planning, implementation, and critique | [Anthropic](https://github.com/anthropics/skills/tree/8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4/skills/frontend-design) |
+| `ui-ux-pro-max` | Searchable design directions, typography, UX, and stack-specific references | [NextLevelBuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/56ea9cf174ed86786187daa9de0e6247cb0747e4/.claude/skills/ui-ux-pro-max) |
 | `vercel-react-best-practices` | React/Next.js performance guidance for implementation and review | [Vercel Labs](https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices) |
 | `find-skills` | Discover skills through skills.sh and the Skills CLI | [Vercel Labs](https://github.com/vercel-labs/skills/tree/18f96ea131dab3b0fcc9b27cf7c6f6cbb6174680/skills/find-skills) |
 | `grill-with-docs` | Explicitly requested interview with domain documentation | [Matt Pocock](https://github.com/mattpocock/skills/tree/24fe0ef7737efae15c87225755e9f6f5965e4888/skills/engineering/grill-with-docs) |
@@ -24,6 +25,9 @@ The existing `clarify-intent` remains the local workflow for small, consequentia
 
 - Mention `$frontend-design`, `$find-skills`, or `$grill-with-docs` in a request. Codex discovers repository skills and can select applicable skills by description; the imported `grill-with-docs` metadata explicitly disables implicit invocation. See [official skill documentation](https://learn.chatgpt.com/docs/build-skills).
 - A request to install a skill is not a request to perform its workflow. Use the deeper interview when requested, rather than on every implementation task.
+- Use `ui-ux-pro-max` as a reference for new visual directions and focused UX questions, alongside `frontend-design` for creative synthesis and `vercel-react-best-practices` for implementation. Query only relevant domains. For a new family, explore a direction with `--design-system`; query `--stack nextjs` separately for implementation guidance. Evaluate the returned matches rather than adopting every suggestion. These searches use bundled data and Python's standard library; they do not require a service or npm dependency.
+- UI UX Pro Max's upstream examples use `${CLAUDE_PLUGIN_ROOT}` and `.claude/skills/`. In this repository resolve `.agents/skills/ui-ux-pro-max/scripts/search.py` to an absolute path instead. From the repository root in PowerShell: `$skillSearch = (Resolve-Path '.agents/skills/ui-ux-pro-max/scripts/search.py').Path`, then `python -B $skillSearch "keyboard focus navigation" --domain ux`. Python 3 is required. Its data, references, scripts, and upstream MIT license are bundled locally.
+- UI UX Pro Max recommendations are advisory. Preserve the ten existing palette tokens, independent artwork colours, JavaScript/App Router/CSS Modules stack, and local-font policy. Tailwind, GSAP, component libraries, remote fonts, and suggested palettes are not installation or migration instructions. Use searches without `--persist` by default; maintain accepted decisions in existing project documentation rather than creating parallel `design-system/MASTER.md` files. Ignore native-app-only checklist items for this website. Owner preferences and the request for distinct new designs take precedence over catalogue defaults.
 - For frontend improvements, apply `frontend-design` and relevant `vercel-react-best-practices` guidance during planning and implementation even when they are not explicitly invoked. Use `clarify-intent` with a focused subset of `grilling` when consequential uncertainty remains. The owner explicitly prefers advisory skills: no mandatory interview, prescribed aesthetic, or optimization checklist overrides their preferences or the project's simplicity rules. Leave upstream copies intact and apply these integration rules around them.
 - Use `$vercel-react-best-practices` for React/Next.js implementation and performance review; pair it with `frontend-design` when both engineering and visual design are relevant. Read the applicable files under its `rules/` directory rather than loading the entire compiled guide for every change. Require a concrete benefit before adding optimization complexity or dependencies; caching, data-fetching libraries, and memoization are conditional techniques, not requirements for this mostly static portfolio. Keep its bundled `AGENTS.md` inside the skill folder as reference material; it does not replace root project instructions.
 - `grill-with-docs` names a host-specific `Skill` tool. In Codex without that tool, read and apply both supporting skills directly. Its interview is more extensive than `clarify-intent`; retain the repository's question limits and existing answers unless the owner explicitly requests otherwise.

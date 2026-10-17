@@ -99,3 +99,26 @@ Append-only record of meaningful additions and durable decisions. Follow the [lo
 - Outcome: Installed the official skill repository-locally at revision `063bee94c3f4df8453406c830b0a7df0f2860278`, preserving its upstream instructions, MIT license declaration, compiled guide, metadata, and rule references. The [skill guide](skills.md) records the pinned source and selective-use guidance: require a concrete benefit before introducing optimization complexity or dependencies.
 - Verification: Installer completed successfully; the skill name, compiled guide, and referenced rule files are present (72 files in the bundled rules directory, including support files). Whitespace checks passed. No application code or npm dependency changed, so application tests were not rerun.
 - Completion check: This installation does not complete the broader H-001 request, H-002, or A-003. Existing backlog entries and H-003's pending removal approval remain unchanged.
+
+## [2026-10-08] refine | Two Eclipse artwork styles and accessible orbital motion
+
+- Actor: agent (Codex).
+- Decision: Following the owner's feedback, Eclipse now uses Manrope and offers Abstract or restrained Celestial artwork within the same composition. The spheres share a slow tilted orbit with quiet transfer pulses; playback respects manual pause, visibility, and reduced-motion preferences. Technique-specific compression metaphors remain a later iteration. Editorial + Olive stays the public default.
+- Guidance: Frontend and React skills support the work; they do not prescribe aesthetics or override owner preferences. Project guidance now calls for focused clarification/grilling only when consequential uncertainty remains.
+- Context and verification: The [README](../README.md#designs-and-content) owns configuration, preview navigation, artwork, and motion instructions. [A-008](backlog/log.md#2026-10-08-done--a-008---refine-eclipse-artwork-typography-and-motion) records completion, focused checks, captures, and remaining verification limits. Human backlog entries were preserved.
+
+## [2026-10-17] add | UI UX Pro Max and five-design handoff
+
+- Actor: agent (Codex).
+- Source and authorization: Owner explicitly requested UI UX Pro Max integration and a handoff for five new independent portfolio designs.
+- Outcome: Installed `ui-ux-pro-max` repository-locally at revision `56ea9cf174ed86786187daa9de0e6247cb0747e4`, preserving 73 upstream skill/data/reference/script files and adding the upstream MIT license. The [skill guide](skills.md) owns pinned provenance, local Python invocation, and compatibility guidance; root instructions route agents to it. Recommendations remain advisory and preserve existing palette and stack decisions. No frontend implementation or runtime dependency change was made.
+- Verification: All 73 installed files matched upstream Git blob hashes. UX and Next.js searches each returned three relevant matches; design-system generation produced structured output without persistence. Documentation whitespace checks passed. Application lint/build were not repeated for this skill/documentation-only change.
+- Handoff and completion check: [A-009](backlog/agent.md#a-009---five-additional-independent-portfolio-designs) records the new design work for the next session; it is not implemented or complete. The skill installation is complete. Existing human backlog entries, H-003's pending removal approval, and unresolved A-003 remain unchanged.
+
+## [2026-10-17] add | Five independent portfolio families
+
+- Actor: agent (Codex).
+- Source and authorization: Owner approved the five-family implementation plan after repository-grounded planning.
+- Decision: Added Broadside's typographic bands, Fieldnotes' annotated notebook, Index's project catalogue, Gallery's exhibition studies, and Wayfinder's navigation map. Each has a distinct homepage, thesis page, and mobile composition. Shared parts provide content and navigation semantics without imposing a common page layout. Existing palette tokens, artwork separation, and Editorial + Olive public defaults remain authoritative.
+- Guidance: Focused UI UX Pro Max searches supplied design and accessibility references; frontend-design informed composition and critique; Vercel React guidance supported server rendering and static imports. Catalogue defaults were evaluated rather than adopted as dependencies or replacement palettes. No generated MASTER.md, runtime dependency, or remote font/image service was added.
+- Context and verification: Updated the [README](../README.md#designs-and-content), [context index](index.md), and [agent handoff](backlog/agent.md). [A-009 completion](backlog/log.md#2026-10-17-done--a-009---five-additional-independent-portfolio-designs) owns verification evidence, local captures, preview URL, and browser limits. It supersedes the prior handoff's pending implementation status; the original historical entry is retained. Human backlog entries and unrelated A-003 remain unchanged.

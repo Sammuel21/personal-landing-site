@@ -1,0 +1,304 @@
+.site {
+  --gallery-serif: Georgia, "Times New Roman", serif;
+}
+.intro {
+  padding: 64px 7vw 72px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10vw;
+  align-items: end;
+}
+.intro h1 {
+  font-family: var(--gallery-serif);
+  font-weight: 400;
+  font-size: clamp(48px, 5.7vw, 88px);
+  letter-spacing: -0.05em;
+  max-width: 12ch;
+}
+.intro a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 24px;
+}
+.exhibition {
+  padding: 0 7vw 80px;
+}
+.collectionLabel {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px !important;
+}
+.feature,
+.secondary figure,
+.cover {
+  margin: 0;
+}
+.stage {
+  display: block;
+  position: relative;
+  background: var(--surface);
+  min-height: 400px;
+  text-decoration: none;
+}
+.study {
+  width: 100%;
+  height: 100%;
+  color: color-mix(
+    in srgb,
+    var(--study-color),
+    var(--foreground) var(--art-contrast)
+  );
+}
+.stage > svg {
+  max-height: 570px;
+}
+.stageLabel {
+  position: absolute;
+  bottom: 30px;
+  left: 36px;
+  font-family: var(--gallery-serif);
+  font-size: clamp(24px, 3vw, 40px);
+}
+.feature figcaption {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  padding-top: 28px;
+}
+.feature figcaption span,
+.secondary figcaption span {
+  font-size: 13px;
+  color: var(--muted);
+}
+.feature h3 {
+  font-family: var(--gallery-serif);
+  font-weight: 400;
+  font-size: 38px;
+  margin-top: 12px;
+}
+.feature h3 a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.feature small {
+  color: var(--muted);
+  margin-top: 20px;
+}
+.secondary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7vw;
+  align-items: start;
+  margin-top: 100px;
+}
+.secondary figure:last-child {
+  padding-top: 100px;
+}
+.smallStage {
+  background: var(--raised);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+}
+.secondary figure:last-child .smallStage {
+  aspect-ratio: 4 / 3;
+  background: var(--surface);
+}
+.secondary figcaption {
+  padding-top: 24px;
+}
+.secondary h3 {
+  font-family: var(--gallery-serif);
+  font-size: 30px;
+  font-weight: 400;
+  margin-block: 12px 20px;
+}
+.closing {
+  margin-inline: 7vw;
+  border-top: 1px solid var(--border);
+  padding-block: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10vw;
+}
+.closing h2 {
+  font-family: var(--gallery-serif);
+  font-weight: 400;
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+.closing small {
+  color: var(--muted);
+  margin-top: 20px;
+}
+.closing a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 20px;
+}
+.projectHero {
+  padding: 40px 7vw 64px;
+}
+.projectHero > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 32px;
+}
+.projectHero > p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.projectHero h1 {
+  font-family: var(--gallery-serif);
+  font-size: clamp(40px, 5vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  margin-top: 28px;
+  max-width: 25ch;
+}
+.cover {
+  margin-inline: 7vw;
+}
+.cover figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.essay {
+  padding: 64px 7vw 0;
+}
+.abstract {
+  font-family: var(--gallery-serif);
+  font-size: clamp(24px, 3vw, 36px);
+  max-width: 40ch !important;
+  line-height: 1.5;
+}
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding-block: 32px;
+}
+.contents a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 14px;
+}
+.chapter {
+  border-top: 1px solid var(--border);
+  padding-block: 56px;
+}
+.chapter h2 {
+  font-family: var(--gallery-serif);
+  font-weight: 400;
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+.chapter > div > p {
+  max-width: 58ch;
+}
+.chapter:has(.sideStudy) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7vw;
+  align-items: center;
+}
+.sideStudy {
+  background: var(--surface);
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 32px 0 0 24px;
+  margin: 0;
+}
+.steps li {
+  padding-left: 8px;
+}
+.steps h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.steps p {
+  font-size: 15px;
+}
+@media (max-width: 800px) {
+  .intro {
+    gap: 40px;
+    padding-inline: 5vw;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .chapter:has(.sideStudy) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .intro {
+    grid-template-columns: 1fr;
+    padding: 36px 20px;
+    gap: 24px;
+  }
+  .intro h1 {
+    max-width: 12ch;
+  }
+  .exhibition {
+    padding: 0 20px 40px;
+  }
+  .stage {
+    min-height: 0;
+  }
+  .stage > svg {
+    min-height: 300px;
+  }
+  .stageLabel {
+    left: 20px;
+    bottom: 20px;
+    font-size: 24px;
+  }
+  .feature figcaption,
+  .secondary,
+  .closing {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .feature figcaption {
+    padding-top: 24px;
+  }
+  .secondary {
+    margin-top: 48px;
+    gap: 40px;
+  }
+  .secondary figure:last-child {
+    padding-top: 0;
+  }
+  .smallStage {
+    aspect-ratio: 4 / 3;
+  }
+  .closing {
+    margin-inline: 20px;
+    padding-block: 40px;
+    gap: 40px;
+  }
+  .projectHero {
+    padding: 24px 20px 36px;
+  }
+  .cover {
+    margin-inline: 20px;
+  }
+  .essay {
+    padding: 40px 20px 0;
+  }
+  .chapter {
+    padding-block: 36px;
+  }
+}

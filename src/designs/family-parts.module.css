@@ -1,0 +1,89 @@
+.base {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-wrap: anywhere;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.base h1,
+.base h2,
+.base h3,
+.base p {
+  margin: 0;
+}
+.base h1,
+.base h2,
+.base h3 {
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.base p {
+  max-width: 68ch;
+}
+.base p + p {
+  margin-top: 1em;
+}
+.base a {
+  text-underline-offset: 0.25em;
+}
+.base small {
+  display: block;
+  font-size: 13px;
+}
+.base a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+.base a:hover {
+  text-decoration-thickness: 2px;
+}
+.navigation {
+  padding: 0 4vw;
+  max-width: none;
+  min-height: 88px;
+}
+.navigation a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 4vw;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+.footer a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+.resources {
+  padding-block: 48px;
+}
+.resources h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.resources a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .navigation {
+    padding-inline: 20px;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    padding-block: 12px;
+  }
+  .navigation nav {
+    gap: 18px;
+  }
+  .footer {
+    padding-inline: 20px;
+  }
+}

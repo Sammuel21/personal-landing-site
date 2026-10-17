@@ -9,6 +9,16 @@ import LatticeHome from "./lattice/Home";
 import LatticeProject from "./lattice/ProjectPage";
 import StudioHome from "./studio/Home";
 import StudioProject from "./studio/ProjectPage";
+import BroadsideHome from "./broadside/Home";
+import BroadsideProject from "./broadside/ProjectPage";
+import FieldnotesHome from "./fieldnotes/Home";
+import FieldnotesProject from "./fieldnotes/ProjectPage";
+import IndexHome from "./index/Home";
+import IndexProject from "./index/ProjectPage";
+import GalleryHome from "./gallery/Home";
+import GalleryProject from "./gallery/ProjectPage";
+import WayfinderHome from "./wayfinder/Home";
+import WayfinderProject from "./wayfinder/ProjectPage";
 
 const designs = {
   editorial: { Home: EditorialHome, ProjectPage: EditorialProject },
@@ -16,6 +26,11 @@ const designs = {
   eclipse: { Home: EclipseHome, ProjectPage: EclipseProject },
   lattice: { Home: LatticeHome, ProjectPage: LatticeProject },
   studio: { Home: StudioHome, ProjectPage: StudioProject },
+  broadside: { Home: BroadsideHome, ProjectPage: BroadsideProject },
+  fieldnotes: { Home: FieldnotesHome, ProjectPage: FieldnotesProject },
+  index: { Home: IndexHome, ProjectPage: IndexProject },
+  gallery: { Home: GalleryHome, ProjectPage: GalleryProject },
+  wayfinder: { Home: WayfinderHome, ProjectPage: WayfinderProject },
 };
 export const designNames = Object.keys(designs);
 export function getDesign(name) {

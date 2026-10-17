@@ -13,7 +13,7 @@ Install dependencies with `npm install`, then run `npm run dev` and open http://
 
 ## Designs and content
 
-The site has five layouts sharing portfolio content and a dedicated thesis page. All ten colour palettes work independently with every layout: 50 combinations, each with a homepage and thesis page.
+The site has ten layouts sharing portfolio content and a dedicated thesis page. All ten colour palettes work independently with every layout: 100 combinations, each with a homepage and thesis page.
 
 | Design | Composition | Default preview palette |
 | --- | --- | --- |
@@ -22,9 +22,14 @@ The site has five layouts sharing portfolio content and a dedicated thesis page.
 | `eclipse` | Centered orbital composition, with Abstract or Celestial artwork | Lunar |
 | `lattice` | Diagram-led research portfolio with native thesis disclosures | Silver |
 | `studio` | Oversized type and offset paper-study posters | Vermilion |
+| `broadside` | Heavy typography, full-width project bands, and reversed research chapters | Vermilion |
+| `fieldnotes` | An open notebook with serif prose, research notes, and a thesis annotation margin | Ember |
+| `index` | A compact project catalogue and research dossier with a desktop navigation rail | Silver |
+| `gallery` | An exhibition walk with original SVG studies and a spacious thesis essay | Graphite |
+| `wayfinder` | A branching portfolio map and a vertical research pathway | Cobalt |
 
 - Set `design` and `palette` in [`src/config/site.js`](src/config/site.js), for example `{ design: "ambient", palette: "silver" }`. Both public pages use the same combination. The default remains Editorial + Olive. Rebuild for production after changing configuration; unsupported values produce a clear error.
-- Compare `/preview/{design}` using any design name above. Controls let you switch palette and layout while keeping the current project. Controls only appear in previews; the public site uses configuration.
+- Compare `/preview/{design}` using any design name above. Open **Compare designs** to switch palette and layout while keeping the current project. The native disclosure shows the current selection when collapsed and a wrapping option grid when open, including on mobile and without JavaScript. **Main site** remains directly available. Controls only appear in previews; the public site uses configuration.
 - Every combination has a shareable URL, such as `/preview/ambient/palette/silver` or `/preview/editorial/palette/lunar/projects/diploma-thesis`. Project, back, and section links retain both selections. All supported pages are pre-rendered; unknown combinations return 404. Previews have `noindex, nofollow` and are accessible to anyone with the URL.
 - Eclipse also accepts `eclipseArtwork: "abstract"` or `"celestial"` in site configuration, consistently across its public homepage and thesis page. Abstract is the default for existing Eclipse preview URLs. Its preview-only artwork links use `/preview/eclipse/palette/{palette}/artwork/{artwork}` with an optional `/projects/diploma-thesis` suffix. Palette/project/back links retain the artwork; switching to another layout drops artwork selection and returning to Eclipse starts with Abstract. Unsupported artwork values return a preview 404 or a clear public configuration error.
 - Edit introduction, biography, GitHub contact, and projects in [`src/data/portfolio.js`](src/data/portfolio.js). The first project is featured. Keep placeholder labels until replacing them with real content.
@@ -37,6 +42,10 @@ The site has five layouts sharing portfolio content and a dedicated thesis page.
 The thesis overview and methodology paraphrase its [README](https://github.com/Sammuel21/diploma-thesis-block-replacement/blob/e8e6615ecf1119ec666237e5dbb7de898bb18211/README.md) and [block-level research notes](https://github.com/Sammuel21/diploma-thesis-block-replacement/blob/e8e6615ecf1119ec666237e5dbb7de898bb18211/docs/documentation/block-level.md). Sol as the original and Luna as the compressed model are the owner's confirmed presentation convention. Results remain explicitly unpublished; notebook outputs are not presented as validated findings.
 
 Eclipse, Lattice, and Studio use Manrope, bundled in `src/designs/fonts/` with its SIL Open Font License and loaded through `next/font/local`. The originals retain their system fonts. No font service is contacted at runtime or build time. Source: [Manrope](https://github.com/google/fonts/tree/main/ofl/manrope).
+
+Broadside and Wayfinder also use bundled Manrope. Fieldnotes and Gallery pair it with system Georgia; Index uses system Courier for record headings. Each new family owns its homepage, thesis composition, and CSS Module. `FamilyParts.jsx` shares only the navigation/footer wrapper, biography/contact content, research chapter links, method steps, and resources. This keeps common content consistent without imposing one page template. Gallery's local SVG studies are decorative illustrations, not measured results; their colours come from project artwork accents and the existing artwork contrast adjustment.
+
+The five new families use server components, ordinary links, and static artwork. They add no client components, persistent motion, runtime dependencies, or external asset requests. Thesis sections remain visible without JavaScript. Desktop navigation rails become inline links on small screens; project records, exhibition captions, and margin notes each have their own mobile composition.
 
 Eclipse's spheres share a 48-second orbit with a 60° tilted plane and −15° diagonal orientation. Three small transfer pulses recur every 12 seconds. A small client wrapper starts motion after hydration, pauses it offscreen or when the tab is hidden, and respects manual pause. Its Pause/Resume control affects orbit and transfer together; reduced motion and no JavaScript produce a complete still scene. Animation runs in CSS, without per-frame React updates. To adjust the timing and geometry, edit `src/designs/eclipse/orbit.module.css`. Technique-specific compression animations remain a later visual iteration.
 

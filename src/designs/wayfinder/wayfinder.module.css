@@ -1,0 +1,349 @@
+.site {
+  --route-width: 3px;
+}
+.map {
+  max-width: 1200px;
+  margin: auto;
+  padding: 64px 48px 80px 100px;
+}
+.origin {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 60px;
+  padding: 0 0 72px 48px;
+  border-left: var(--route-width) solid var(--accent);
+}
+.originMark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -16px;
+  top: 0;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px var(--background);
+}
+.origin h1 {
+  font-size: clamp(48px, 5.6vw, 80px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  margin-block: 24px;
+  max-width: 13ch;
+}
+.origin > div > p:first-child {
+  font-size: 13px;
+  color: var(--muted);
+}
+.destinations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+.destinations a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  text-decoration: none;
+}
+.destinations a:hover,
+.destinations a:focus-visible {
+  background: var(--raised);
+}
+.research {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+  padding: 48px;
+  border-left: var(--route-width) solid var(--accent);
+  background: var(--surface);
+  border-radius: 0 48px 48px 0;
+}
+.stop {
+  position: absolute;
+  left: -11px;
+  top: 54px;
+  width: 19px;
+  height: 19px;
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  background: var(--background);
+}
+.research > div > span {
+  font-size: 13px;
+  color: var(--muted);
+}
+.research h2 {
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin-block: 24px;
+}
+.research h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.open {
+  display: inline-flex;
+  gap: 24px;
+  align-items: center;
+  min-height: 48px;
+  margin-top: 24px;
+}
+.branchNote {
+  align-self: center;
+  border-top: 3px solid var(--accent);
+  padding-top: 24px;
+}
+.branchNote > span {
+  font-size: 13px;
+  color: var(--muted);
+}
+.branchNote p {
+  font-size: 24px;
+  line-height: 1.4;
+  margin-top: 16px;
+}
+.branches {
+  padding: 56px 0 56px 48px;
+  border-left: var(--route-width) solid var(--accent);
+}
+.branches > h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.branches > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 2px solid var(--border);
+  gap: 48px;
+}
+.branches article {
+  position: relative;
+  padding-top: 32px;
+}
+.smallStop {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  top: -7px;
+  left: 0;
+  background: var(--background);
+}
+.branches h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.branches small {
+  color: var(--muted);
+  margin-top: 16px;
+}
+.about,
+.contact {
+  position: relative;
+  border-left: var(--route-width) solid var(--accent);
+  padding: 48px 0 48px 48px;
+}
+.about h2,
+.contact h2 {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+.about small {
+  color: var(--muted);
+  margin-top: 20px;
+}
+.contact a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 24px;
+}
+.project {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 48px 0;
+}
+.projectHero {
+  padding-bottom: 56px;
+}
+.projectHero > a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.projectHero > p:first-of-type {
+  color: var(--muted);
+  font-size: 14px;
+}
+.projectHero h1 {
+  font-size: clamp(38px, 4.7vw, 68px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  max-width: 25ch;
+  margin-block: 24px;
+}
+.journey {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 64px;
+}
+.contents {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.contents a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.route {
+  border-left: var(--route-width) solid var(--accent);
+  padding-left: 40px;
+}
+.chapter {
+  position: relative;
+  padding-block: 40px;
+}
+.chapter > .stop {
+  left: -51px;
+  top: 46px;
+}
+.chapter h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.steps {
+  margin-top: 32px;
+  padding-left: 28px;
+}
+.steps li {
+  padding: 24px 0 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.steps li::marker {
+  color: var(--accent);
+  font-size: 24px;
+}
+.steps h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+@media (max-width: 950px) {
+  .map {
+    padding-left: 48px;
+    padding-right: 32px;
+  }
+  .origin {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .destinations {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .research {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .branchNote {
+    max-width: 440px;
+  }
+  .journey {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .map {
+    padding: 40px 20px 40px 28px;
+  }
+  .origin,
+  .research,
+  .branches,
+  .about,
+  .contact {
+    padding-left: 24px;
+  }
+  .origin {
+    padding-bottom: 40px;
+  }
+  .originMark {
+    width: 21px;
+    height: 21px;
+    left: -12px;
+  }
+  .origin h1 {
+    font-size: 48px;
+  }
+  .destinations {
+    gap: 8px;
+  }
+  .destinations a {
+    font-size: 13px;
+    padding-inline: 14px;
+  }
+  .research {
+    padding-top: 32px;
+    padding-right: 20px;
+    padding-bottom: 32px;
+    border-radius: 0 24px 24px 0;
+  }
+  .research .stop {
+    top: 38px;
+  }
+  .branches > div {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    border-top: 0;
+  }
+  .branches article {
+    border-top: 2px solid var(--border);
+  }
+  .project {
+    padding: 24px 20px 0;
+  }
+  .journey {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .contents {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 20px;
+  }
+  .route {
+    margin-left: 8px;
+    padding-left: 24px;
+  }
+  .chapter > .stop {
+    left: -35px;
+  }
+  .chapter {
+    padding-block: 32px;
+  }
+  .chapter > .stop {
+    top: 38px;
+  }
+}
