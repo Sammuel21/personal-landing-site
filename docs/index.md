@@ -1,7 +1,7 @@
 ---
 type: index
 created: "2026-10-03"
-updated: "2026-10-17"
+updated: "2026-10-18"
 curated: false
 ---
 
@@ -34,7 +34,7 @@ The remote is [Sammuel21/personal-landing-site](https://github.com/Sammuel21/per
 
 ## Direction and rationale
 
-The owner's 2026-10-17 feedback reprioritises design calibration before further UI implementation. The [confirmed brief](design/brief.md) is the maintained home for audience, character, project context, and the relationship between the portfolio and future apps. Future work develops one deliberate identity while preserving existing previews; the current ten-palette implementation remains unchanged. The [research collection](design/analysis/README.md) explains the evidence and limits behind the proposed design approach.
+The owner's 2026-10-17 feedback reprioritises design calibration before further UI implementation. The [confirmed brief](design/brief.md) is the maintained home for audience, character, project context, and the relationship between the portfolio and future apps. Its [Inside the work studies](design/brief.md#visual-calibration--inside-the-work) now provide three local desktop/mobile compositions awaiting visual review. Future work develops one deliberate identity while preserving existing previews; the current ten-palette implementation remains unchanged. The [research collection](design/analysis/README.md) explains the evidence and limits behind the proposed design approach.
 
 These statements summarize the owner's setup conversation on 2026-10-03; they do not certify human review of this document.
 

@@ -40,3 +40,20 @@ New ideas can be written as plain text. Agents must preserve existing wording, i
 > The objective of this task is to automate backlog handling while keeping some degree of manual control on the human layer.
 >
 > In case of needed clarifcation, ask.
+
+## H-004 - Visual calibration before implementation
+
+- Captured: 2026-10-18.
+- Source: Owner's 2026-10-17 continuation request and subsequent explicit instruction, "PLEASE IMPLEMENT THIS PLAN:", accepting the Inside the work visual-study plan. The excerpts below preserve the requested outcome; the [brief](../design/brief.md#visual-calibration--inside-the-work) maintains the proposal and artifact links.
+- Title: Agent-supplied label; quoted intent below is the owner's wording.
+
+> Next task: visual calibration before implementation.
+> Propose one coherent visual direction, explaining its focal subject,
+> imagery, colour relationships, typography, and desktop/mobile composition.
+> Use the research as reasoning, not as a template to copy.
+
+> Keep the plan concise. Then move to concrete visual studies:
+> a homepage opening, a thesis introduction, and a future app entry.
+> Do not build another family/palette matrix or a complete site before
+> we review the visual direction. Detailed thesis data is not required
+> for clearly labelled conceptual artwork.

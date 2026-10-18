@@ -1,6 +1,6 @@
 ---
 type: agent-backlog
-updated: "2026-10-17"
+updated: "2026-10-18"
 ---
 
 # Agent backlog
@@ -9,14 +9,15 @@ Editable working interpretation. Preserve links to human intent and evidence; ap
 
 ## Current handoff
 
-- Objective: Develop the portfolio incrementally while learning React. The latest completed phase is design research and calibration; consult the [confirmed brief](../design/brief.md) before further UI work.
+- Objective: Develop the portfolio incrementally while learning React. Research and the first Inside the work visual studies are complete; the owner's visual review is next. Consult the [brief](../design/brief.md#visual-calibration--inside-the-work) before further UI work.
 - State: Ten complete layouts support ten independent palettes and shared, source-backed thesis content. Broadside, Fieldnotes, Index, Gallery, and Wayfinder join the original five families; comparison controls use a native disclosure with mobile grids. Existing Eclipse artwork and motion are preserved. Public configuration remains Editorial + Olive; Eclipse's configured artwork is Abstract. Configuration and editing instructions live in the [README](../../README.md#designs-and-content).
 - Evidence: [A-009 completion](log.md#2026-10-17-done--a-009---five-additional-independent-portfolio-designs) records passing lint/build, 262 live routes, metadata/404/navigation checks, 60 responsive light/dark captures, remaining-palette contrast checks, no-JavaScript/reduced-motion checks, and limitations. The [capture index](../../local/design-review/captures.md) is a local ignored artifact. Earlier Eclipse-specific verification remains in [A-008](log.md#2026-10-08-done--a-008---refine-eclipse-artwork-typography-and-motion).
 - Review: Reference documents remain explicitly unreviewed by a human. The proposed conventions are available for the owner to inspect; review metadata does not create an extra approval gate for otherwise authorized work.
 - Backlog monitoring: [Automatic completion checks](../conventions.md#automatic-completion-checks) are now required after verified logical work segments and before handoff. [A-006](log.md#2026-10-04-done--a-006---apply-backlog-completion-checks-after-logical-work-segments) is complete and removed; the [H-003 completion event](log.md#2026-10-04-done--h-003---agentic-backlog-monitoring) records pending human removal approval.
 - Research state: [A-010 is complete](log.md#2026-10-17-done--a-010---research-and-calibrate-the-portfolio-identity). [Reference analyses](../design/analysis/README.md) cover Apple, Anthropic, OpenAI, Linear, Stripe, and the current portfolio. Q1–Q9 settled audience, character, personal voice, app-family relationship, and one future identity; the owner confirmed shared direction. The [ADR](../adr/0001-deliberate-portfolio-identity.md) preserves the deliberate departure from the ten-palette constraint for future work. Existing UI and public configuration are unchanged.
 - Evidence limits: [Visual appendix](../design/analysis/appendix.md) records local ignored captures and provenance. OpenAI's direct browser captures returned 403; its current rendered layout remains unverified. This phase is design analysis, not a new accessibility audit or app-content verification.
-- Next action: A future design task should develop one identity through a small desktop/mobile visual calibration using the brief, before UI implementation. No interview question remains pending. [Gallery / Lagoon](http://localhost:3000/preview/gallery/palette/lagoon) was reachable during research capture; restart with `npm start` if needed. A-009 remains complete. Deployment, H-002, and unrelated A-003 remain outside this phase.
+- Visual study state: [A-011 completion](log.md#2026-10-18-done--a-011---produce-inside-the-work-visual-studies) records the local HTML/CSS board, six original SVG compositions, six desktop/mobile captures, and responsive/contrast/navigation checks. The [brief](../design/brief.md#visual-calibration--inside-the-work) owns the proposed identity and artifact links. These are ignored local files; they do not change the application or select a finished design.
+- Next action: Review the three studies with the owner under A-012. No research interview answer is pending; Q1–Q9 remain settled. Record specific visual feedback and revise only the studies before application implementation. A-009/A-010 remain complete. Deployment, H-002, and unrelated A-003 remain outside this phase.
 
 ## Active tasks
 
@@ -28,3 +29,11 @@ Editable working interpretation. Preserve links to human intent and evidence; ap
 - Next action: Recheck for a patched compatible lint-tool dependency chain and update it when available. Keep dependency updates separate from the design implementation.
 
 Backend, accounts, and a database currently have no requirement.
+
+### A-012 - Review and settle the visual direction
+
+- Status: awaiting_human.
+- Source: [H-004](human.md#h-004---visual-calibration-before-implementation), the owner-approved study plan, and the required visual review before application implementation.
+- Completed portion: [A-011](log.md#2026-10-18-done--a-011---produce-inside-the-work-visual-studies) delivered and verified the three studies. This item covers the remaining review, not retention of that completed production task.
+- Acceptance: The owner reviews the desktop/mobile homepage, thesis introduction, and future app entry and identifies the accepted direction or concrete changes. Record that decision in the brief without implying review of unrelated documents.
+- Next action: Obtain feedback on the subject, personal presence, colour relationship, and app-family resemblance; revise the local studies as needed. Do not build a complete site, extend the palette matrix, or publish app claims before this review.
